@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+      }
+      nav {
+        flex: 1;
+        vertical-align: top;
+        border: 1px solid rgb(228, 225, 79);
+        padding: 10px;
+      }
+      nav ul {
+        list-style: none;
+      }
+      nav li {
+        border-bottom: 1px solid rgb(250, 37, 9);
+        padding: 10px;
+        /* box-shadow offset-x offset-y blur 색상 */
+        /* inset은 그림자를 box안쪽으로 들어가게 */
+        box-shadow: inset 0 0 0 #d80286; /* hover에 background를 사용하지 않고 효과를 주는 것  */
+        transition: ease-out 0.8s; /* hover에 background를 사용하지 않고 효과를 주는 것  */
+      }
+      nav li:hover {
+        box-shadow: inset 200px 0 1px 0 #d80286; /* hover에 background를 사용하지 않고 효과를 주는 것  */
+        cursor: pointer;
+      }
+      section {
+        flex: 6;
+        padding: 10px;
+        border: 1px solid rgb(228, 225, 79);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>home</li>
+        <li>회사 소개</li>
+        <li>공지사항</li>
+        <li>자유게시판</li>
+      </ul>
+    </nav>
+    <section>
+      <article>
+        근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및
+        단체행동권을 가진다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다.
+        훈장등의 영전은 이를 받은 자에게만 효력이 있고, 어떠한 특권도 이에
+        따르지 아니한다. 법률은 특별한 규정이 없는 한 공포한 날로부터 20일을
+        경과함으로써 효력을 발생한다
+      </article>
+      <article>
+        국가는 대외무역을 육성하며, 이를 규제·조정할 수 있다. 국무회의는 정부의
+        권한에 속하는 중요한 정책을 심의한다. 환경권의 내용과 행사에 관하여는
+        법률로 정한다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은
+        법률이 정하는 바에 의하여 보장된다. 헌법개정안은 국회가 의결한 후 30일
+        이내에 국민투표에 붙여 국회의원선거권자 과반수의 투표와 투표자 과반수의
+        찬성을 얻어야 한다.
+      </article>
+      <article>
+        모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를
+        가진다. 국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와
+        행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에
+        감사원을 둔다. 군인 또는 군무원이 아닌 국민은 대한민국의 영역안에서는
+        중대한 군사상 기밀·초병·초소·유독음식물공급·포로·군용물에 관한 죄중
+        법률이 정한 경우와 비상계엄이 선포된 경우를 제외하고는 군사법원의 재판을
+        받지 아니한다.
+      </article>
+    </section>
+  </body>
+</html>
