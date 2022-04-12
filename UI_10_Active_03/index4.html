@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+      nav {
+        background-color: #111;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 100;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        color: #fff;
+        justify-content: space-around;
+      }
+      nav ul li {
+        padding: 30px;
+        border-bottom: 3px solid transparent;
+        transition: border 0.3s ease-out;
+      }
+      nav ul li:hover {
+        border-bottom: 3px solid rgba(218, 231, 35, 0.5);
+      }
+      div {
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      div:nth-of-type(1) {
+        background-image: url(images/image2.jpg);
+        min-height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div:nth-of-type(1) h1 {
+        background-color: #111;
+        color: #fff;
+        padding: 18px;
+        font-size: 25px;
+        /*
+            letter-spacing: 글자 간격 띄우기
+        */
+        letter-spacing: 5px;
+      }
+      div:nth-of-type(1) h1:hover ~ p {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(5%);
+        border-radius: 45%;
+      }
+      div:nth-of-type(1) p {
+        background-color: rgb(250, 221, 204);
+        border: 1px solid rgba(22, 21, 21, 0.4);
+        padding: 20px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.7s;
+      }
+      div:nth-of-type(2) {
+        color: #777;
+        background-color: white;
+        text-align: center;
+        padding: 50px 80px;
+      }
+
+      /*영문자일 경우 대문자 혹은소문자(lowercase)로 바꿀 수 있다.*/
+      div:nth-of-type(2) h3 {
+        text-transform: uppercase;
+      }
+      div:nth-of-type(2) p {
+        text-transform: lowercase;
+      }
+      div:nth-of-type(3) {
+        background-image: url("images/image5.jpg");
+        min-height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-shadow: 1px 1px 1px black;
+      }
+      div:nth-of-type(4) {
+        color: #ddd;
+        background-color: #282e34;
+        padding: 50px 80px;
+        text-align: justify;
+      }
+      div:nth-of-type(5) {
+        background-image: url("images/image3.jpg");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+      }
+      div:nth-of-type(5) h3 {
+        color: #f7f7f7;
+        font-size: 25px;
+        background-color: transparent;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>공지사항</li>
+        <li>자유게시판</li>
+        <li>로그인</li>
+        <li>회원가입</li>
+      </ul>
+    </nav>
+    <div>
+      <h1>플라밍고</h1>
+      <p>
+        플라밍고의 어원인 스페인어 플라멘코(flamenco)는 불꽃(flama)새라는
+        뜻이다.
+      </p>
+    </div>
+    <div>
+      <h3>Flamingo</h3>
+      <p>
+        Flamingos are famous for their bright pink feathers, stilt-like legs,
+        and S-shaped neck. When a flamingo spots potential dinner—favorite foods
+        include shrimp, snails, and plantlike water organisms called algae—it
+        plunges its head into the water, twists it upside down, and scoops the
+        fish using its upper beak like a shovel. They are able to "run" on
+        water, thanks to their webbed feet, to gain speed before lifting up into
+        the sky. Flamingos build nests that look like mounds of mud along
+        waterways. At the top of the mound, in a shallow hole, the female lays
+        one egg. The parents take turns sitting on the egg to keep it warm.
+        After about 30 days, the egg hatches.
+      </p>
+    </div>
+    <div>
+      <h2>
+        나태주 시인 <br />
+        "들꽃"
+      </h2>
+    </div>
+    <div>
+      <p>자세히 보아야 예쁘다 오래 보아야 사랑스럽다 너도 그렇다</p>
+      <p>
+        이름을 알고나면 이웃이 되고 색깔을 알고 나면 친구가 되고 모양까지
+        알고나면 연인이 된다
+      </p>
+    </div>
+    <div><h3>끝.</h3></div>
+  </body>
+</html>
