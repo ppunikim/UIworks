@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: top 1s;
+      }
+      header h1 {
+        width: 100%;
+        background-color: rgb(243, 223, 109);
+        color: #fff;
+        font-weight: 900;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgb(56, 54, 54);
+        padding: 1.5rem;
+      }
+      header nav {
+        background-color: rgb(130, 238, 238);
+        width: 100%;
+      }
+      header nav ul {
+        display: flex;
+        justify-content: space-around;
+      }
+      header nav ul li {
+        list-style: none;
+        padding: 12px 16px;
+        color: rgb(80, 76, 76);
+        border: 3px solid transparent;
+      }
+
+      section div {
+        border: 1px solid rgb(8, 128, 118);
+        height: 200px;
+        margin: 20px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sunny's hompage</h1>
+      <nav>
+        <ul>
+          <li>HOME</li>
+          <li>공지사항</li>
+          <li>자유게시판</li>
+          <li>로그인</li>
+          <li>회원가입</li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </body>
+  <script>
+    // 본문의 header 태그를 가져와서 header object에 저장
+    const header = document.querySelector("header");
+    const section = document.querySelector("section");
+    console.log(header);
+
+    //header태그의 화면에 그려진 높이갚을 추출하여
+    //headerHeight변수에 저장
+    const headerHeight = header.offsetHeight;
+    //section 태그의 style중에서 margin-top값을 지정하기
+    // javascript(js) 에서 style을 지정할 때는 마이너스(-) 기호를 제거하고
+    //                                      단어를 Camel Case로 작성한다.
+    section.style.marginTop = headerHeight + 10 + "px"; //"200px"
+    //window.scrollY
+    // 화면에 있는 세로 스크롤 막대의 상단좌표
+    let prevScrollPos = window.scrollY;
+    document.addEventListener("scroll", () => {
+      //console.log("scroll");
+      const currentScrollPos = window.scrollY;
+      //console.log(currentScrollPos);
+      if (prevScrollPos > currentScrollPos) {
+        header.style.top = "0";
+      } else {
+        header.style.top = headerHeight * -1 + "px";
+      }
+      prevScrollPos = currentScrollPos;
+    });
+  </script>
+</html>
