@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+        viewport : 모바일 브라우저 화면 가로크기를 말한다
+        content="width=device-width : 컨텐츠의 width를 각 디바이스 크기에 맞춘다
+        initial-scale=1.0 : 최소의 화면의 크기를 말하며, 1.0은 100% 비율
+        minimum-scale=1.0 : 화면을 줄였을때 최소 화면 크기
+        maximum-scale=1.0 : 화면을 늘렸을때 최대화면 크기
+        user-scalable=no : 사용자가 확대축소할수 없게 한다.
+        viewport-fit=cover" : 아이폰 노치부분 가리기
+    -->
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <!-- ios에서 전화번호가 링크화되는 것 방지 -->
+    <meta name="format-detection" content="telephone=no">
+    <title>Dagym</title>
+</head>
+<link rel="stylesheet" href="assets/css/calender.css" />
+
+<body>
+    <div id="wrap">
+        <!-- Header -->
+        <header id="header">
+
+            <div id="icon_solid"></div>
+            <div class="content">
+                <div class="inner">
+                    <h2>셀핏</h2>
+                    <h3>Do it List</h3>
+                </div>
+                <form id="calender" name="calender" action="값을 보낼 주소" method="post">
+                    <input type='date' name='userBirthday' />
+                </form>
+                <input id="a-box" type="checkbox" />
+                <label class="abc-list" for="a-box">초급</label>
+
+                <input id="b-box" type="checkbox" />
+                <label class="abc-list" for="b-box">중급</label>
+
+                <input id="c-box" type="checkbox" />
+                <label class="abc-list" for="c-box">상급</label>
+
+                <ul class="a-list" >
+                    <li><a href="">1. 초급</a></li>
+                    <li><a href="">2. 초급</a></li>
+                    <li><a href="">3. 초급</a></li>
+                    <li><a href="">4. 초급</a></li>
+                </ul>
+
+                <ul class="b-list" >
+                    <li><a href="">1. 중급</a></li>
+                    <li><a href="">2. 중급</a></li>
+                    <li><a href="">3. 중급</a></li>
+                    <li><a href="">4. 중급</a></li>
+                    <li><a href="">5. 중급</a></li>
+                </ul>
+
+                <ul class="c-list" >
+                    <li><a href="">1. 고급</a></li>
+                    <li><a href="">2. 고급</a></li>
+                    <li><a href="">3. 고급</a></li>
+                    <li><a href="">4. 고급</a></li>
+                    <li><a href="">5. 고급</a></li>
+                </ul>
+                <div id="height1"></div>
+            </div>
+        </header>
+        <section>
+            <p>
+                먹는다고 다 실찌진 없는다.<br />
+                많이 먹어서 살찔 뿐
+              </p>
+        </section>
+        <footer>
+            <a href="./login.html">첫화면</a>
+        </footer>
+</body>
+
+</html>
