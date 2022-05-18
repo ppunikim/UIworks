@@ -13,21 +13,39 @@
       }
       div {
         width: 50%;
-        height: 100px;
+        height: 200px;
         border: 2px solid thistle;
         background-color: slateblue;
+        margin: 20px auto;
+        background-size: cover;
+      }
+      div:nth-of-type(1) {
+        background-image: url(images/flower1.jpg);
+      }
+      div:nth-of-type(2) {
+        background-image: url(images/flowers2.jpg);
+      }
+      div:nth-of-type(3) {
+        background-image: url(images/flowers3.jpg);
+      }
+      div:nth-of-type(4) {
+        background-image: url(images/jellyfish.jpg);
+      }
+      div:nth-of-type(5) {
+        background-image: url(images/moon.jpg);
       }
     </style>
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </head>
   <body>
     <div data-aos="fade-up"></div>
     <div data-aos="fade-down"></div>
     <div data-aos="flip-up"></div>
+    <div data-aos="zoom-in-down"></div>
   </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
