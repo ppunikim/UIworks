@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS를 이용한 이미지 슬라이드</title>
+    <title>자동 이미지 슬라이드1</title>
     <style>
       * {
         box-sizing: border-box;
@@ -137,6 +137,26 @@
           });
           //생성된 span tag를 div.badge tag에 child로 추가하라.
           divBadge.appendChild(span);
+        }
+
+        let count = 0;
+        const interval_cb = (e) => {
+          badge_click_cb(e, ++count % imgCount);
+          if (count > imgCount * 100) count = 0;
+        };
+        let interval = setInterval(interval_cb, 2000);
+        //div.image_window에 마우스가 over되면 interval 취소
+        //div.image_window에 마우스가 out되면 다시 시작
+        const image_window = document.querySelector("div.image_window");
+        if (image_window) {
+          //마우스가 이미지에 올라가면 intervel을 취소
+          image_window.addEventListener("mouseover", () => {
+            clearInterval(interval);
+          });
+          image_window.addEventListener("mouseout", () => {
+            //interval은 사용하지 않는 것이 좋다. 브라우저 성능상 문제가 있다.
+            interval = setInterval(interval_cb, 2000);
+          });
         }
       }); //document.addEvent("DOMContentLoaded")
     </script>
